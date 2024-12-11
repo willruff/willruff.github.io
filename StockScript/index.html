@@ -27,11 +27,21 @@
         <section id="features">
             <h2>Key Features</h2>
             <ul>
-                <li><strong>Simple Declarations:</strong> Define stocks with a price and number of shares in seconds.</li>
-                <li><strong>Seamless Merges:</strong> Combine two stocks into one, recalculating prices and shares automatically.</li>
-                <li><strong>Splits & Reverse Splits:</strong> Perform stock splits (e.g., 2-for-1) or reverse splits with a single command.</li>
-                <li><strong>Price Adjustments:</strong> Increase or decrease prices by absolute values or percentages.</li>
-                <li><strong>Clear Output:</strong> Display market caps, share counts, and prices to track changes over time.</li>
+                <li><strong>Intuitive Stock Declarations:</strong> Quickly define stocks with attributes like price and number of shares. Example:
+                    <pre><code>stock AAPL {
+            price: 150.50;
+            shares: 100;
+        }</code></pre>
+                </li>
+                <li><strong>Advanced Stock Operations:</strong> Perform operations like splits, reverse splits, merges, and price adjustments. Example:
+                    <pre><code>AAPL.split(2);      // 2-for-1 stock split
+        AAPL.merge(MSFT);  // Merge MSFT into AAPL
+        AAPL.adjustPrice(10%);  // Increase price by 10%</code></pre>
+                </li>
+                <li><strong>Clear and Customizable Output:</strong> Use display commands to view detailed stock data, including price, shares, and market capitalization.</li>
+                <li><strong>Cryptocurrency Support:</strong> Extend functionality to include cryptocurrency trading and market analysis with the crypto module.</li>
+                <li><strong>Market Simulation:</strong> Simulate complex market scenarios using user-defined rules and interactions between stocks and cryptocurrencies.</li>
+                <li><strong>Human-Readable Syntax:</strong> Stock Script is easy to write and understand, making it suitable for both beginners and professionals.</li>
             </ul>
         </section>
 
