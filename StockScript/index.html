@@ -36,7 +36,7 @@
                 <li><strong>Advanced Stock Operations:</strong> Perform operations like splits, reverse splits, merges, and price adjustments. Example:
                     <pre><code>AAPL.split(2);      // 2-for-1 stock split
         AAPL.merge(MSFT);  // Merge MSFT into AAPL
-        AAPL.adjustPrice(10%);  // Increase price by 10%</code></pre>
+        AAPL.adjust_price(10%);  // Increase price by 10%</code></pre>
                 </li>
                 <li><strong>Clear and Customizable Output:</strong> Use display commands to view detailed stock data, including price, shares, and market capitalization.</li>
                 <li><strong>Cryptocurrency Support:</strong> Extend functionality to include cryptocurrency trading and market analysis with the crypto module.</li>
@@ -61,7 +61,7 @@ display AAPL;
 AAPL.merge(MSFT);
 display AAPL;
 AAPL.split(2);
-display AAPL;
+display AAPL.shares;
             </code></pre>
 
             <p>In this example, we define two stocks and merge MSFT into AAPL, then perform a 2-for-1 split on AAPL. The <strong>display</strong> commands show you how the changes affect price, shares, and market cap.</p>
@@ -74,12 +74,12 @@ display AAPL;
                 <li>Clone the <strong>stock-script</strong> interpreter repository.</li>
                 <li>Write your <strong>.stock</strong> scripts and run them with the interpreter.</li>
             </ol>
-            <p>For detailed instructions, visit the <a href="https://github.com/your-username/stock-script" target="_blank">GitHub repository</a>.</p>
+            <p>For detailed instructions, visit the <a href="https://github.com/willruff/StockScript" target="_blank">GitHub repository</a>.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Will Ruff • <a href="https://github.com/your-username/stock-script" target="_blank">View on GitHub</a></p>
+        <p>&copy; 2024 Will Ruff • <a href="https://github.com/willruff/StockScript" target="_blank">View on GitHub</a></p>
     </footer>
 </body>
 </html>
