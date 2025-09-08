@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Will Ruff</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <a href="../index.html" class="back-to-home" title="Back to Home">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <!-- Projects Hero -->
+    <section class="projects-hero">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>Explore the innovative solutions I've built, from mobile applications with AI integration to domain-specific languages.</p>
+        </div>
+    </section>
+
+    <!-- FlexVault Project -->
+    <section class="project-detail">
+        <div class="project-container" id="flexvault">
+            <div class="project-content">
+                <h2>FlexVault</h2>
+                <div class="project-meta">
+                    <span class="meta-item">Swift</span>
+                    <span class="meta-item">CoreML</span>
+                    <span class="meta-item">iOS</span>
+                    <span class="meta-item">2025</span>
+                </div>
+                <p>
+                    FlexVault is a privacy-focused fitness tracking mobile application that leverages AI-powered pose 
+                    classification to help users track their fitness progress. Built with Swift and CoreML, it provides 
+                    intelligent analysis of progress photos while maintaining complete user privacy. Watch the demo video 
+                    to see the app in action!
+                </p>
+                <div class="project-features">
+                    <h3>Key Features</h3>
+                    <ul class="features-list">
+                        <li>AI-powered pose classification using CoreML</li>
+                        <li>Privacy-first design with local data storage</li>
+                        <li>Progress photo analysis and tracking</li>
+                        <li>Weight tracking and goal management</li>
+                        <li>Export functionality for data portability</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="FlexVaultPrivacy/" class="project-link" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Privacy Policy
+                    </a>
+                </div>
+            </div>
+            <div class="project-image">
+                <div class="iphone-frame">
+                    <div class="iphone-screen">
+                        <video 
+                            class="flexvault-video" 
+                            poster="" 
+                            muted 
+                            autoplay 
+                            loop
+                            controls
+                            onloadedmetadata="this.playbackRate=2.0"
+                        >
+                            <source src="ScreenRecording_09-06-2025 21-33-56_1.mov" type="video/quicktime">
+                            <source src="ScreenRecording_09-06-2025 21-33-56_1.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stock Script Project -->
+    <section class="project-detail">
+        <div class="project-container reverse" id="stockscript">
+            <div class="project-content">
+                <h2>Stock Script</h2>
+                <div class="project-meta">
+                    <span class="meta-item">Python</span>
+                    <span class="meta-item">textX</span>
+                    <span class="meta-item">DSL</span>
+                    <span class="meta-item">2024</span>
+                </div>
+                <p>
+                    Stock Script is a domain-specific language (DSL) designed to simplify financial modeling and stock analysis. 
+                    Built with Python and textX, it provides an intuitive syntax for declaring stocks, performing operations 
+                    like splits and merges, and analyzing market data.
+                </p>
+                <div class="project-features">
+                    <h3>Key Features</h3>
+                    <ul class="features-list">
+                        <li>Intuitive stock declaration syntax</li>
+                        <li>Advanced operations (splits, merges, price adjustments)</li>
+                        <li>Cryptocurrency support and market simulation</li>
+                        <li>Human-readable output and customizable display</li>
+                        <li>Extensible architecture for custom operations</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="StockScript/" class="project-link" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Project
+                    </a>
+                    <a href="https://github.com/willruff/StockScript" class="project-link secondary" target="_blank">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </a>
+                </div>
+            </div>
+            <div class="project-image">
+                <div class="project-image-placeholder">
+                    <img src="../chart.png" alt="StockScript Chart" class="project-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Will Ruff. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

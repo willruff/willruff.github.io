@@ -1,40 +1,365 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Will Ruff</title>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="styles.css">
-	</head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will Ruff - AI/ML Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
-	<section class="header">
-		<nav>
-			<div class="nav-links">
-				<ul>
-					<li><a href="WillRuff.pdf" target="_blank">Resume</a></li>
-					<li><a href="https://www.linkedin.com/in/willhruff" target="_blank">LinkedIn</a></li>
-					<li><a href="http://github.com/willruff" target="_blank">Github</a></li>
-			    </ul>
-			</div>
-		</nav>
-		<div class="text-box">
-			<h1>Will Ruff</h1>
-			<h2>Software Engineer</h2>
-		</div>
-	</section>
-    <section class="about">
-        <div class="row">
-            <div class="col">
-                <h1>About Me</h1>
-                <p>Current Junior at San Diego State University majoring in Computer Science with a minor in Mathematics. I am a driven and ambitious individual with a strong foundation in computer science and software development. I am highly interested in business and entrepreneurship and am constantly pursuing new ways to use technology to drive innovation and growth. I am seeking opportunities that will allow me to further my knowledge in any capacity, while also helping companies and individuals strive toward their goals.</p>
-                <h1>Contact Me</h1>
-                <h2>(425)615-0778</h2>
-                <h2>wruff9150@sdsu.edu</h2>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">WR</span>
             </div>
-            <div class="col">
-                <img src="headshot.jpg">
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="projects/" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
-
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name">Will Ruff</span>
+                        <span class="title">AI/ML Engineer</span>
+                    </h1>
+                    <p class="hero-description">
+                        Senior Computer Science student at San Diego State University specializing in 
+                        artificial intelligence and machine learning. Passionate about building AI 
+                        applications that solve real-world problems and drive innovation.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="projects/" class="btn btn-primary">
+                            <i class="fas fa-code"></i>
+                            View My Work
+                        </a>
+                        <a href="Will_Ruff_Resume.pdf" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="headshot.jpg" alt="Will Ruff" class="profile-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
     </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        Current Senior at San Diego State University majoring in Computer Science with a minor in Mathematics. I am a driven and ambitious individual with a strong foundation in computer science, data engineering, and artificial intelligence. My experience ranges from building computer vision models to deploying AI applications that improve real-world processes.
+                    </p>
+                    <p class="about-description">
+                        I am passionate about applying machine learning and AI to solve impactful problems and exploring ways technology can drive innovation and growth. I am seeking opportunities that will allow me to deepen my knowledge in AI/ML, while also contributing meaningful solutions that help companies and individuals achieve their goals.
+                    </p>
+                    <div class="skills">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-code"></i>
+                                <span>C++</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>SQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-docker"></i>
+                                <span>Docker</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-brain"></i>
+                                <span>PyTorch</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-eye"></i>
+                                <span>Computer Vision</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3.88</div>
+                        <div class="stat-label">GPA</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Internships</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">University Research Positions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">Professional roles and internships</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Data Engineer Intern</h3>
+                            <span class="experience-company">Kenworth - Division of PACCAR Inc.</span>
+                            <span class="experience-date">May 2025 – Aug. 2025</span>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Engineered an in-house computer vision system replacing a third-party tool, reducing costs by $100K+ annually</li>
+                            <li>Increased cab part detection accuracy from 94.5% → 96.5% through iterative training and hyperparameter tuning</li>
+                            <li>Developed custom YOLO and Azure CV models for part detection and cab positioning along the production line</li>
+                            <li>Built a Flask web application to deliver real-time inference to production dashboards, aiding operator inspections</li>
+                            <li>Designed a YOLO camera-triggering model to detect optimal cab alignment for capturing all four sides at EOL</li>
+                            <li>Created a real-time part detection stream with live bounding boxes on cabs as they exit the manufacturing line</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">YOLO</span>
+                            <span class="tech-tag">Azure CV</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Operating Systems Teaching Assistant</h3>
+                            <span class="experience-company">San Diego State University</span>
+                            <span class="experience-date">Jan. 2025 – May 2025</span>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Assisted in maintaining and configuring the auto-grader codebase to ensure accurate and efficient grading</li>
+                            <li>Set up and tested the auto grader for each assignment, optimizing performance and creating unique test cases</li>
+                            <li>Graded assignments and exams for a class of 150 students ensuring consistency and adherence to grading rubrics</li>
+                            <li>Held weekly office hours to provide personalized support, debugging assistance, and address student questions</li>
+                            <li>Collaborated with the instructor to improve course materials and enhance the students' learning experience</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Shell Scripting</span>
+                            <span class="tech-tag">Auto-grading</span>
+                            <span class="tech-tag">System Administration</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Software Engineer Intern</h3>
+                            <span class="experience-company">Glympse - Location Sharing Technology</span>
+                            <span class="experience-date">June 2024 – Aug. 2024</span>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Developed Python and Go scripts for file comparison, cutting memory usage by 25% via benchmarking</li>
+                            <li>Migrated legacy code to a new repository, adding essential parameters and enhancing report functionality</li>
+                            <li>Refactored and modernized a shell script report in Python, enhancing readability and maintainability</li>
+                            <li>Built and implemented comprehensive unit tests to ensure the reliability and accuracy of the Python code</li>
+                            <li>Deployed code using GitLab CI/CD pipelines, configuring environments with '.gitlab-ci.yml' and Docker</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">GitLab CI/CD</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Unit Testing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Undergraduate Research Assistant</h3>
+                            <span class="experience-company">San Diego State University</span>
+                            <span class="experience-date">Feb. 2024 – June 2024</span>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Conducted precise research under faculty in the Integrating Cyber Innovations with Physical World Lab</li>
+                            <li>Investigated medical device recalls to detect underlying problems focusing on software-related issues</li>
+                            <li>Implemented code to automate data extraction from the FDA recall website for relevant analysis</li>
+                            <li>Engaged in problem-solving exercises to address research challenges and advance project objectives</li>
+                            <li>Utilized HTML to design a compelling and operational website that proficiently showcases research</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Research</span>
+                            <span class="tech-tag">Web Scraping</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <a href="projects/#flexvault" class="project-card project-card-link">
+                    <div class="project-image">
+                        <img src="Untitled_design__9_-removebg-preview.png" alt="FlexVault App Design" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">FlexVault</h3>
+                        <p class="project-description">
+                            A privacy-focused fitness tracking mobile application with AI-powered 
+                            pose classification and progress photo analysis using CoreML.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">CoreML</span>
+                            <span class="tech-tag">iOS</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="projects/#stockscript" class="project-card project-card-link">
+                    <div class="project-image">
+                        <img src="chart.png" alt="StockScript Chart" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Stock Script</h3>
+                        <p class="project-description">
+                            A domain-specific language for modeling, merging, and analyzing stocks. 
+                            Features intuitive syntax for stock declarations and advanced operations 
+                            like splits and merges.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">textX</span>
+                            <span class="tech-tag">DSL</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Ready to collaborate or have a question?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>wruff9150@sdsu.edu</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>(425) 615-0778</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Seattle, WA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/willhruff" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/willruff" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="Will_Ruff_Resume.pdf" target="_blank" class="social-link">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Resume</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Will Ruff. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>

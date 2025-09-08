@@ -1,0 +1,449 @@
+/* Projects Page Styles */
+
+/* Projects Hero Section */
+.projects-hero {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+    padding: 120px 0 80px;
+}
+
+.projects-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.projects-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Project Detail Sections */
+.project-detail {
+    padding: 80px 0;
+}
+
+.project-detail:nth-child(even) {
+    background: var(--bg-secondary);
+}
+
+.project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.project-container.reverse {
+    direction: rtl;
+}
+
+.project-container.reverse > * {
+    direction: ltr;
+}
+
+.project-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.project-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-lg);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.project-features {
+    margin: 2rem 0;
+}
+
+.project-features h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.features-list li::before {
+    content: '✓';
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+/* Project Images and Videos */
+.project-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.project-image-placeholder {
+    height: 400px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    width: 100%;
+}
+
+/* iPhone 16 Frame Container */
+.iphone-frame {
+    position: relative;
+    width: 320px;
+    height: 680px;
+    background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
+    border-radius: 55px;
+    padding: 12px;
+    box-shadow: 
+        0 0 0 2px #444,
+        0 0 0 4px #222,
+        0 0 0 6px #111,
+        0 8px 32px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* iPhone 16 Dynamic Island */
+.iphone-frame::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 35px;
+    background: #000;
+    border-radius: 20px;
+    z-index: 10;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Remove home button for iPhone 16 */
+.iphone-frame::after {
+    display: none;
+}
+
+/* iPhone 16 Screen Area */
+.iphone-screen {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 45px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Project Images */
+.project-img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* FlexVault Video - Phone Screen Recording */
+.flexvault-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #000;
+    transition: var(--transition);
+    display: block;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+/* Hide specific video controls but keep progress bar */
+.flexvault-video::-webkit-media-controls-volume-slider {
+    display: none !important;
+}
+
+.flexvault-video::-webkit-media-controls-mute-button {
+    display: none !important;
+}
+
+.flexvault-video::-webkit-media-controls-current-time-display {
+    display: none !important;
+}
+
+.flexvault-video::-webkit-media-controls-time-remaining-display {
+    display: none !important;
+}
+
+.flexvault-video::-webkit-media-controls-fullscreen-button {
+    display: none !important;
+}
+
+/* Project Links */
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    border: 2px solid var(--primary);
+    min-width: fit-content;
+    white-space: nowrap;
+}
+
+.project-link:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.project-link.secondary {
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.project-link.secondary:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.project-link i {
+    font-size: 1rem;
+}
+
+/* iPhone screen container */
+.iphone-screen {
+    position: relative;
+}
+
+.flexvault-video:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-2xl);
+}
+
+/* General Project Video */
+.project-video {
+    width: 100%;
+    height: 400px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    object-fit: cover;
+    background: #000;
+    transition: var(--transition);
+    margin: 0 auto;
+    display: block;
+}
+
+.project-video:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-2xl);
+}
+
+/* Back to Home Button */
+.back-to-home {
+    position: fixed;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    background: var(--primary);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.back-to-home:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .projects-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .project-content h2 {
+        font-size: 2rem;
+    }
+    
+    .back-to-home {
+        left: 1rem;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .iphone-frame {
+        width: 280px;
+        height: 595px;
+        padding: 10px;
+    }
+    
+    .iphone-frame::before {
+        width: 100px;
+        height: 30px;
+        top: 18px;
+        border-radius: 18px;
+    }
+    
+    .project-video {
+        height: 350px;
+    }
+    
+    .project-links {
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+    
+    .project-link {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .projects-hero h1 {
+        font-size: 1.75rem;
+    }
+    
+    .projects-hero p {
+        font-size: 1rem;
+    }
+    
+    .project-detail {
+        padding: 60px 0;
+    }
+    
+    .project-container {
+        padding: 0 var(--space-4);
+        gap: 1.5rem;
+    }
+    
+    .project-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    .project-meta {
+        gap: 0.5rem;
+    }
+    
+    .meta-item {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .project-features h3 {
+        font-size: 1.25rem;
+    }
+    
+    .project-image-placeholder {
+        height: 300px;
+        font-size: 3rem;
+    }
+    
+    .back-to-home {
+        left: 1rem;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .iphone-frame {
+        width: 240px;
+        height: 510px;
+        padding: 8px;
+    }
+    
+    .iphone-frame::before {
+        width: 80px;
+        height: 25px;
+        top: 15px;
+        border-radius: 15px;
+    }
+    
+    .project-video {
+        height: 300px;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+    
+    .project-link {
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
+        justify-content: center;
+        width: 100%;
+    }
+}
