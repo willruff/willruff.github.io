@@ -311,23 +311,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize scroll animations after a short delay
     setTimeout(initScrollAnimations, 500);
     
-    // Initialize video speed
-    initVideoSpeed();
 });
 
-// Set video playback speed to 2x
-function initVideoSpeed() {
-    const videos = document.querySelectorAll('video');
-    videos.forEach(video => {
-        video.addEventListener('loadedmetadata', function() {
-            this.playbackRate = 2.0;
-        });
-        // Also set it immediately if metadata is already loaded
-        if (video.readyState >= 1) {
-            video.playbackRate = 2.0;
-        }
-    });
-}
 
 
 // Handle resize events

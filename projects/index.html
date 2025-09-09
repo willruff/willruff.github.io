@@ -66,13 +66,11 @@
                             class="flexvault-video" 
                             poster="" 
                             muted 
-                            autoplay 
                             loop
                             controls
-                            onloadedmetadata="this.playbackRate=2.0"
                         >
-                            <source src="ScreenRecording_09-06-2025 21-33-56_1.mov" type="video/quicktime">
-                            <source src="ScreenRecording_09-06-2025 21-33-56_1.mov" type="video/mp4">
+                            <source src="FlexVault_Demo.mov" type="video/quicktime">
+                            <source src="FlexVault_Demo.mov" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -137,5 +135,18 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script>
+        // Delay video autoplay by 2 seconds after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const video = document.querySelector('.flexvault-video');
+                if (video) {
+                    video.play().catch(function(error) {
+                        console.log('Video autoplay failed:', error);
+                    });
+                }
+            }, 2000); // 2 second delay
+        });
+    </script>
 </body>
 </html>
