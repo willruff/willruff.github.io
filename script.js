@@ -2,12 +2,15 @@
 
 // Mobile Navigation
 const initMobileNav = () => {
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
+
+    console.log('Mobile nav elements:', { navToggle, navMenu, navLinks: navLinks.length }); // Debug log
 
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
+            console.log('Toggle clicked'); // Debug log
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
@@ -30,6 +33,8 @@ const initMobileNav = () => {
                 document.body.style.overflow = '';
             }
         });
+    } else {
+        console.log('Mobile nav elements not found'); // Debug log
     }
 };
 
@@ -297,6 +302,37 @@ const initAccessibility = () => {
 };
 
 // Initialize all features
+// Experience toggle functionality for mobile
+function toggleExperience(button) {
+    console.log('Toggle function called'); // Debug log
+    
+    const experienceItem = button.closest('.experience-item');
+    const toggleText = button.querySelector('.toggle-text');
+    const toggleIcon = button.querySelector('.toggle-icon');
+    
+    console.log('Experience item:', experienceItem); // Debug log
+    console.log('Current classes:', experienceItem.classList); // Debug log
+    
+    if (experienceItem.classList.contains('expanded')) {
+        // Collapse
+        experienceItem.classList.remove('expanded');
+        button.classList.remove('expanded');
+        toggleText.textContent = 'View Details';
+        toggleIcon.textContent = '▼';
+        console.log('Collapsed'); // Debug log
+    } else {
+        // Expand
+        experienceItem.classList.add('expanded');
+        button.classList.add('expanded');
+        toggleText.textContent = 'Hide Details';
+        toggleIcon.textContent = '▲';
+        console.log('Expanded'); // Debug log
+    }
+}
+
+// Make function globally accessible
+window.toggleExperience = toggleExperience;
+
 document.addEventListener('DOMContentLoaded', () => {
     initLoadingAnimation();
     initMobileNav();
@@ -308,10 +344,26 @@ document.addEventListener('DOMContentLoaded', () => {
     initKeyboardNavigation();
     initAccessibility();
     
+    // Initialize experience toggle buttons
+    initExperienceToggles();
+    
     // Initialize scroll animations after a short delay
     setTimeout(initScrollAnimations, 500);
     
 });
+
+// Initialize experience toggle functionality
+function initExperienceToggles() {
+    const toggleButtons = document.querySelectorAll('.experience-toggle');
+    console.log('Found toggle buttons:', toggleButtons.length); // Debug log
+    
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            console.log('Button clicked'); // Debug log
+            toggleExperience(this);
+        });
+    });
+}
 
 
 
