@@ -67,12 +67,16 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--space-6);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Navigation */
@@ -101,6 +105,8 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .nav-logo {
@@ -124,6 +130,7 @@ body {
     display: flex;
     gap: var(--space-8);
     align-items: center;
+    list-style: none;
 }
 
 .nav-link {
@@ -167,11 +174,13 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #6366f1 100%);
     position: relative;
     overflow: hidden;
+    padding-top: 80px; /* Account for fixed navbar */
 }
 
 .hero::before {
@@ -201,6 +210,7 @@ body {
     position: relative;
     z-index: 2;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-content {
@@ -364,6 +374,7 @@ body {
 .image-container {
     position: relative;
     width: 320px;
+    max-width: 90vw;
     height: 320px;
     border-radius: 50%;
     overflow: hidden;
@@ -652,8 +663,9 @@ section {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: var(--space-10);
+    width: 100%;
 }
 
 .project-card {
@@ -913,6 +925,73 @@ section {
     font-weight: 500;
 }
 
+/* Experience Toggle Button */
+.experience-toggle {
+    display: none; /* Hidden on desktop */
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-lg);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+    align-self: flex-start;
+}
+
+.experience-toggle:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.toggle-icon {
+    margin-left: 0.5rem;
+    transition: var(--transition);
+}
+
+.experience-toggle.expanded .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Mobile-specific experience behavior */
+@media (max-width: 768px) {
+    .experience-toggle {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .experience-description,
+    .experience-tech {
+        display: none !important;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .experience-item.expanded .experience-description,
+    .experience-item.expanded .experience-tech {
+        display: block !important;
+        opacity: 1;
+        max-height: 1000px;
+        margin-top: 1rem;
+        padding: 0;
+    }
+    
+    .experience-item.expanded .experience-description {
+        display: block !important;
+    }
+    
+    .experience-item.expanded .experience-tech {
+        display: flex !important;
+    }
+}
+
 /* Experience Timeline Dot - Removed to prevent overlap */
 
 /* Contact Section */
@@ -1099,6 +1178,17 @@ section {
 }
 
 @media (max-width: 768px) {
+    /* Global mobile constraints to prevent horizontal overflow */
+    * {
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+    
+    body {
+        overflow-x: hidden;
+        width: 100vw;
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -1112,6 +1202,7 @@ section {
         box-shadow: var(--shadow-xl);
         padding: var(--space-8) 0;
         gap: var(--space-4);
+        list-style: none;
     }
 
     .nav-menu.active {
@@ -1134,8 +1225,23 @@ section {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .hero {
+        padding-top: 100px; /* Extra padding for mobile browser UI */
+        min-height: calc(100vh - 20px); /* Account for mobile browser bars */
+        min-height: calc(100dvh - 20px); /* Dynamic viewport height */
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .hero-content {
+        gap: var(--space-8);
+        padding-top: var(--space-4); /* Additional top padding for mobile */
+        width: 100%;
+    }
+
     .hero-buttons {
         justify-content: center;
+        width: 100%;
     }
 
     .about-stats {
@@ -1145,15 +1251,21 @@ section {
 
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-6);
+        width: 100%;
     }
 
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 1fr;
+        gap: var(--space-3);
+        width: 100%;
     }
     
     .skill-item {
         min-height: 100px;
+        padding: var(--space-4);
+        width: 100%;
     }
     
     .experience-timeline::before {
@@ -1167,6 +1279,7 @@ section {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
         text-align: left;
+        width: calc(100% - 4rem);
     }
     
     /* Timeline dots removed to prevent overlap */
@@ -1179,14 +1292,38 @@ section {
 
     .container {
         padding: 0 var(--space-4);
+        width: 100%;
+        max-width: 100vw;
     }
     
     section {
         padding: var(--space-16) 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .about-content {
+        gap: var(--space-8);
+        width: 100%;
+    }
+    
+    .contact-content {
+        gap: var(--space-8);
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding-top: 120px; /* Extra padding for small mobile screens */
+        min-height: calc(100vh - 40px); /* More space for browser UI */
+        min-height: calc(100dvh - 40px); /* Dynamic viewport height */
+    }
+
+    .hero-content {
+        padding-top: var(--space-6); /* More top padding for small screens */
+    }
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
@@ -1205,6 +1342,7 @@ section {
 
     .image-container {
         width: 280px;
+        max-width: 85vw;
         height: 280px;
     }
     
@@ -1212,4 +1350,91 @@ section {
         padding: 0 var(--space-4);
     }
     
+    .container {
+        padding: 0 var(--space-3);
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-2);
+        width: 100%;
+    }
+    
+    .skill-item {
+        min-height: 80px;
+        padding: var(--space-3);
+    }
+    
+    .experience-item:nth-child(odd) .experience-content,
+    .experience-item:nth-child(even) .experience-content {
+        margin-left: 3rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .experience-timeline::before {
+        left: 1.5rem;
+    }
+    
+    .experience-content::before {
+        left: -15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero {
+        padding-top: 140px; /* Maximum padding for very small screens */
+        min-height: calc(100vh - 60px); /* Maximum space for browser UI */
+        min-height: calc(100dvh - 60px); /* Dynamic viewport height */
+    }
+
+    .hero-content {
+        padding-top: var(--space-8); /* Maximum top padding for very small screens */
+    }
+
+    .container {
+        padding: 0 var(--space-2);
+    }
+    
+    .nav-container {
+        padding: 0 var(--space-2);
+    }
+    
+    .hero-container {
+        padding: 0 var(--space-2);
+    }
+    
+    .image-container {
+        width: 240px;
+        max-width: 80vw;
+        height: 240px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-1);
+        width: 100%;
+    }
+    
+    .btn {
+        padding: var(--space-3) var(--space-6);
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .project-title {
+        font-size: 1.5rem;
+    }
+    
+    .experience-title {
+        font-size: 1.25rem;
+    }
 }

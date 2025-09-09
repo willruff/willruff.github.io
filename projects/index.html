@@ -12,10 +12,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Back to Home Button -->
-    <a href="../index.html" class="back-to-home" title="Back to Home">
-        <i class="fas fa-home"></i>
-    </a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">WR</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#experience" class="nav-link">Experience</a>
+                <a href="../index.html#projects" class="nav-link">Projects</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
     <!-- Projects Hero -->
     <section class="projects-hero">
@@ -28,6 +44,23 @@
     <!-- FlexVault Project -->
     <section class="project-detail">
         <div class="project-container" id="flexvault">
+            <div class="project-image">
+                <div class="iphone-frame">
+                    <div class="iphone-screen">
+                        <video 
+                            class="flexvault-video" 
+                            poster="" 
+                            muted 
+                            loop
+                            controls
+                            preload="metadata"
+                        >
+                            <source src="FlexVault_Demo_optimized.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
             <div class="project-content">
                 <h2>FlexVault</h2>
                 <div class="project-meta">
@@ -59,29 +92,17 @@
                     </a>
                 </div>
             </div>
-            <div class="project-image">
-                <div class="iphone-frame">
-                    <div class="iphone-screen">
-                        <video 
-                            class="flexvault-video" 
-                            poster="" 
-                            muted 
-                            loop
-                            controls
-                        >
-                            <source src="FlexVault_Demo.mov" type="video/quicktime">
-                            <source src="FlexVault_Demo.mov" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Stock Script Project -->
     <section class="project-detail">
         <div class="project-container reverse" id="stockscript">
+            <div class="project-image">
+                <div class="project-image-placeholder">
+                    <img src="../chart.png" alt="StockScript Chart" class="project-img">
+                </div>
+            </div>
             <div class="project-content">
                 <h2>Stock Script</h2>
                 <div class="project-meta">
@@ -114,11 +135,6 @@
                         <i class="fab fa-github"></i>
                         Source Code
                     </a>
-                </div>
-            </div>
-            <div class="project-image">
-                <div class="project-image-placeholder">
-                    <img src="../chart.png" alt="StockScript Chart" class="project-img">
                 </div>
             </div>
         </div>
