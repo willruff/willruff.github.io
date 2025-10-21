@@ -1,6 +1,6 @@
 # FlexVault Privacy Policy
 
-**Last Updated: September 2025**
+**Last Updated: October 2025**
 
 ## Introduction
 
@@ -45,19 +45,20 @@ The app uses the information it processes locally to:
 - **Feature Development**: Improve existing features and develop new ones
 - **Performance Optimization**: Monitor App performance and fix technical issues
 - **User Experience**: Enhance the overall user experience and interface
+- **AI Model Training**: Use anonymized photos (with consent) to improve pose detection accuracy
 
 ### Communication
 - **Support**: Respond to your questions and provide customer support
 - **Updates**: Notify you about App updates and new features
 
-**Important Note**: All data processing occurs locally on your device. The app developer does not have access to your personal data, photos, or any information stored within the app.
+**Important Note**: All data processing takes place locally on your device. With your explicit consent, you can choose to share anonymized photos to help improve our AI model.
 
 ## Data Storage and Security
 
 ### Local Storage
 - **CoreData**: All your photos, weight data, and progress information are stored locally on your device using Apple's CoreData framework
 - **UserDefaults**: App preferences and settings are stored locally on your device
-- **No Cloud Storage**: We do not store your personal data on external servers or cloud platforms
+- **Optional Training Data**: With your consent, anonymized photos may be stored on secure servers for AI model improvement
 
 ### Data Security
 - **Device-Level Security**: Your data is protected by your device's built-in security features
@@ -77,6 +78,23 @@ We may disclose your information only in the following circumstances:
 - **Legal Requirements**: When required by law or to protect our rights
 - **App Store Requirements**: As required by Apple's App Store guidelines
 - **Your Consent**: When you explicitly consent to sharing your information
+
+## Optional Training Data Collection
+
+### What We Collect (With Your Consent)
+- **Anonymized Photos**: Progress photos without any personal identifiers or metadata
+- **No Personal Information**: Photos are stripped of any identifying information
+
+### How We Use Training Data
+- **Model Improvement**: Improve AI pose detection accuracy for all users
+- **Research and Development**: Enhance the app's core functionality
+- **Quality Assurance**: Ensure consistent and accurate pose classification
+
+### Your Control
+- **Opt-In Only**: Training data collection is completely optional
+- **Easy to Disable**: You can turn off training data collection at any time in Settings
+- **No Impact**: Disabling training data collection does not affect app functionality
+- **Consent Required**: We only collect training data after you explicitly agree
 
 ## Your Rights and Choices
 
@@ -111,8 +129,7 @@ Your continued use of the App after any modifications to this Privacy Policy con
 
 If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
 
-**Email**: [Your Contact Email]
-**Website**: [Your Website URL]
+**Email**: FlexVaultHelp@gmail.com
 
 ## Compliance
 
