@@ -48,9 +48,9 @@
                         applications that solve real-world problems and drive innovation.
                     </p>
                     <div class="hero-buttons">
-                        <a href="projects/" class="btn btn-primary">
-                            <i class="fas fa-code"></i>
-                            View My Work
+                        <a href="#experience" class="btn btn-primary">
+                            <i class="fas fa-briefcase"></i>
+                            View My Experience
                         </a>
                         <a href="Will_Ruff_Resume.pdf" target="_blank" class="btn btn-secondary">
                             <i class="fas fa-download"></i>
@@ -98,8 +98,8 @@
                                 <span>C++</span>
                             </div>
                             <div class="skill-item">
-                                <i class="fab fa-java"></i>
-                                <span>Java</span>
+                                <i class="fab fa-aws"></i>
+                                <span>AWS</span>
                             </div>
                             <div class="skill-item">
                                 <i class="fas fa-database"></i>
@@ -126,16 +126,16 @@
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
-                        <div class="stat-number">3.88</div>
+                        <div class="stat-number">3.9</div>
                         <div class="stat-label">GPA</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">Internships</div>
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Professional Roles</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">University Research Positions</div>
+                        <div class="stat-number">30,000+</div>
+                        <div class="stat-label">Users</div>
                     </div>
                 </div>
             </div>
@@ -150,6 +150,62 @@
                 <p class="section-subtitle">Professional roles and internships</p>
             </div>
             <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Research Assistant I</h3>
+                            <span class="experience-company">SDSU Climate Informatics Laboratory</span>
+                            <span class="experience-date">Sep. 2025 – Present</span>
+                            <button class="experience-toggle">
+                                <span class="toggle-text">View Details</span>
+                                <i class="toggle-icon">▼</i>
+                            </button>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Built Python pipelines to process NOAA climate data from AWS S3 into cloud-optimized formats for rapid access</li>
+                            <li>Leveraged NetCDF, Kerchunk, Zarr, and xarray to build a lightweight, server-side retrieval system for visualization</li>
+                            <li>Extracted key dataset attributes into a unified metadata layer to make data access more modular and efficient</li>
+                            <li>Developed FastAPI endpoints to dynamically query and stream climate data from cloud storage on user requests</li>
+                            <li>Designed an engine-specific access system to automatically handle multiple dataset formats at system runtime</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">AWS S3</span>
+                            <span class="tech-tag">Zarr</span>
+                            <span class="tech-tag">xarray</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Founding Engineer</h3>
+                            <span class="experience-company">ToneAdapt.com</span>
+                            <span class="experience-date">Dec. 2025 – Feb. 2026</span>
+                            <button class="experience-toggle">
+                                <span class="toggle-text">View Details</span>
+                                <i class="toggle-icon">▼</i>
+                            </button>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Built and scaled a full-stack SaaS to 30,000+ user signups and $5K+ MRR in the first 60 days</li>
+                            <li>Implemented a GenAI-assisted research system that aggregates guitar tone data and adapts it to the user's gear</li>
+                            <li>Architected a normalized database schema and query layer supporting authentication, subscriptions, and usage</li>
+                            <li>Deployed and maintained production infrastructure on Vercel with automated builds, isolation, and rollbacks</li>
+                            <li>Developed internal dashboards to track sales, MRR, churn, and user activity for data-driven product decisions</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span class="tech-tag">Full-Stack</span>
+                            <span class="tech-tag">GenAI</span>
+                            <span class="tech-tag">Vercel</span>
+                            <span class="tech-tag">SaaS</span>
+                            <span class="tech-tag">Database Design</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="experience-item">
                     <div class="experience-content">
                         <div class="experience-header">
@@ -319,50 +375,31 @@
                 <h2 class="section-title">Let's Connect</h2>
                 <p class="section-subtitle">Ready to collaborate or have a question?</p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>wruff9150@sdsu.edu</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p>(425) 615-0778</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>Seattle, WA</p>
-                        </div>
-                    </div>
+            <div class="contact-grid">
+                <a href="mailto:willruff5@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>willruff5@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/willhruff" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="tel:4256150778" class="contact-link">
+                    <i class="fas fa-phone"></i>
+                    <span>(425) 615-0778</span>
+                </a>
+                <a href="https://github.com/willruff" target="_blank" class="contact-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <div class="contact-link">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Seattle, WA</span>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/willhruff" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin-in"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/willruff" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="Will_Ruff_Resume.pdf" target="_blank" class="social-link">
-                        <i class="fas fa-file-pdf"></i>
-                        <span>Resume</span>
-                    </a>
-                </div>
+                <a href="Will_Ruff_Resume.pdf" target="_blank" class="contact-link">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Resume</span>
+                </a>
             </div>
         </div>
     </section>
@@ -371,7 +408,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Will Ruff. All rights reserved.</p>
+                <p>&copy; 2026 Will Ruff. All rights reserved.</p>
             </div>
         </div>
     </footer>

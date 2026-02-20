@@ -104,7 +104,7 @@ const initScrollProgress = () => {
         left: 0;
         width: 0%;
         height: 3px;
-        background: linear-gradient(135deg, #6366f1, #f59e0b);
+        background: #00d4ff;
         z-index: 9999;
         transition: width 0.1s ease-out;
         border-radius: 0 2px 2px 0;
@@ -140,7 +140,7 @@ const initScrollAnimations = () => {
     }, observerOptions);
 
     const animateElements = document.querySelectorAll(
-        '.section-header, .about-text, .about-stats, .skill-item, .project-card, .contact-item, .social-link, .experience-item'
+        '.section-header, .about-text, .about-stats, .skill-item, .project-card, .contact-link, .experience-item'
     );
     
     animateElements.forEach(el => observer.observe(el));
@@ -197,7 +197,7 @@ const initLoadingAnimation = () => {
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #0a0a0f;
         z-index: 10000;
         display: flex;
         align-items: center;
@@ -209,8 +209,8 @@ const initLoadingAnimation = () => {
     loader.style.cssText = `
         width: 60px;
         height: 60px;
-        border: 4px solid rgba(255, 255, 255, 0.3);
-        border-top: 4px solid white;
+        border: 4px solid rgba(255, 255, 255, 0.1);
+        border-top: 4px solid #00d4ff;
         border-radius: 50%;
         animation: spin 1s linear infinite;
     `;
@@ -262,9 +262,9 @@ const initKeyboardNavigation = () => {
 
 // Accessibility focus management
 const initAccessibility = () => {
-    document.querySelectorAll('.nav-link, .btn, .social-link, .project-link').forEach(element => {
+    document.querySelectorAll('.nav-link, .btn, .contact-link, .project-link').forEach(element => {
         element.addEventListener('focus', function() {
-            this.style.outline = '3px solid #6366f1';
+            this.style.outline = '3px solid #00d4ff';
             this.style.outlineOffset = '2px';
         });
         
@@ -281,7 +281,7 @@ const initAccessibility = () => {
         position: absolute;
         top: -40px;
         left: 6px;
-        background: #6366f1;
+        background: #0a0a0f;
         color: white;
         padding: 8px;
         text-decoration: none;

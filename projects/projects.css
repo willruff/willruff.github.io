@@ -2,11 +2,12 @@
 
 /* Projects Hero Section */
 .projects-hero {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--bg-secondary);
     color: white;
     text-align: center;
     padding: 120px 0 80px;
     margin-top: 80px; /* Account for fixed navbar */
+    border-bottom: 1px solid var(--border);
 }
 
 .projects-hero h1 {
@@ -65,12 +66,13 @@
 }
 
 .meta-item {
-    background: var(--primary);
-    color: white;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary);
     padding: 0.5rem 1rem;
     border-radius: var(--radius-lg);
     font-size: 0.875rem;
     font-weight: 500;
+    border: 1px solid var(--border);
 }
 
 .project-features {
@@ -98,7 +100,7 @@
 
 .features-list li::before {
     content: '✓';
-    color: var(--accent);
+    color: var(--secondary);
     font-weight: bold;
     font-size: 1.25rem;
 }
@@ -114,15 +116,16 @@
 
 .project-image-placeholder {
     height: 400px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--bg-tertiary);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--text-secondary);
     font-size: 4rem;
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-xl);
     width: 100%;
+    border: 1px solid var(--border);
 }
 
 /* iPhone 16 Frame Container */
@@ -238,33 +241,35 @@
     gap: 0.5rem;
     padding: 1rem 2rem;
     background: transparent;
-    color: var(--primary);
+    color: #ffffff;
     text-decoration: none;
     border-radius: var(--radius-lg);
     font-weight: 600;
     font-size: 0.95rem;
     transition: var(--transition);
-    border: 2px solid var(--primary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     min-width: fit-content;
     white-space: nowrap;
 }
 
 .project-link:hover {
-    background: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
     color: white;
     transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.4);
     box-shadow: var(--shadow-lg);
 }
 
 .project-link.secondary {
     background: transparent;
-    color: var(--primary);
-    border-color: var(--primary);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .project-link.secondary:hover {
-    background: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
     color: white;
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .project-link i {
